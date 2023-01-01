@@ -114,27 +114,5 @@
 
 
 
-    'Sub capture(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click, ImageButton2.Click, ImageButton3.Click, ImageButton25.Click
 
-    '    Dim ImageButton_clicked As ImageButton = DirectCast(sender, ImageButton)
-    '    Dim ImageButton_clicked_ImageURL As String = ImageButton_clicked.ImageUrl
-
-    '    If Request.Cookies("first_move").Value = True Then
-    '        Response.Cookies("first_move").Value = False ' Moves after this will no longer be first move
-    '        init_sender_is_piece_to_move() ' initialises the sender_is_piece_to_move to true only once, as after this it alternates from true to false to true....
-    '    End If
-
-    '    If Request.Cookies("sender_is_piece_to_move").Value = True Then
-    '        Dim cookieObject As New HttpCookie("start_position")
-    '        Response.Cookies("start_position").Value = ImageButton_clicked_ImageURL
-    '        Response.Cookies("sender_is_piece_to_move").Value = False
-    '    Else ' Button clicked is where the user wishes to move the chess piece/button previously clicked, stored in start_position cookie
-    '        ImageButton_clicked.ImageUrl = Request.Cookies("start_position").Value
-    '        Response.Cookies("sender_is_piece_to_move").Value = True
-    '    End If
-
-    '    ImageButton_clicked.ImageUrl = Request.Cookies("start_position").Value
-
-
-    'End Sub
 End Class

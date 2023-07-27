@@ -35,7 +35,7 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>NEA project.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -90,40 +90,111 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database.mdb" />
-    <Content Include="chess game.aspx" />
+    <Content Include="ai_settings.aspx" />
+    <Content Include="analysis_from_ai.aspx" />
+    <Content Include="App_Data\Database.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Historical games images\left arrow.png" />
+    <Content Include="Historical games images\left_arrow.jpg" />
+    <Content Include="Historical games images\right arrow.png" />
+    <Content Include="Historical games images\right_arrow.jpg" />
+    <Content Include="learn_from_an_ai_3.aspx" />
+    <Content Include="two_player.aspx" />
     <Content Include="chess pieces\bB.png" />
     <Content Include="chess pieces\bK.png" />
     <Content Include="chess pieces\bN.png" />
     <Content Include="chess pieces\bP.png" />
     <Content Include="chess pieces\bQ.png" />
     <Content Include="chess pieces\bR.png" />
+    <Content Include="famous_games.aspx" />
+    <Content Include="learn_from_an_ai_2.aspx" />
+    <Content Include="learn from an ai.aspx" />
     <Content Include="chess pieces\wB.png" />
     <Content Include="chess pieces\wK.png" />
     <Content Include="chess pieces\wN.png" />
     <Content Include="chess pieces\wP.png" />
     <Content Include="chess pieces\wQ.png" />
     <Content Include="chess pieces\wR.png" />
-    <Content Include="Create game.aspx" />
+    <Content Include="stockfish.js" />
+    <Content Include="stockfish.wasm.js" />
+    <Content Include="stockfish_15.1_win_x64_avx2\Copying.txt" />
+    <Content Include="stockfish_15.1_win_x64_avx2\stockfish-windows-2022-x86-64-avx2.exe" />
+    <Content Include="stockfish_15.1_win_x64_avx2\Top CPU Contributors.txt" />
+    <Content Include="previous game analysis.aspx" />
+    <Content Include="Two player.aspx" />
     <Content Include="Leaderboards.aspx" />
-    <Content Include="Main Menu.aspx" />
-    <Content Include="Registration and Login.aspx" />
+    <Content Include="main_menu.aspx" />
+    <Content Include="registration_and_login.aspx" />
     <Content Include="sender_is_piece_to_move_switcher.aspx" />
     <Content Include="Web.config" />
+    <Content Include="worker.js" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="chess game.aspx.designer.vb">
-      <DependentUpon>chess game.aspx</DependentUpon>
+    <Compile Include="ai_settings.aspx.designer.vb">
+      <DependentUpon>ai_settings.aspx</DependentUpon>
     </Compile>
-    <Compile Include="chess game.aspx.vb">
-      <DependentUpon>chess game.aspx</DependentUpon>
+    <Compile Include="ai_settings.aspx.vb">
+      <DependentUpon>ai_settings.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Create game.aspx.designer.vb">
-      <DependentUpon>Create game.aspx</DependentUpon>
+    <Compile Include="analysis_from_ai.aspx.designer.vb">
+      <DependentUpon>analysis_from_ai.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Create game.aspx.vb">
-      <DependentUpon>Create game.aspx</DependentUpon>
+    <Compile Include="analysis_from_ai.aspx.vb">
+      <DependentUpon>analysis_from_ai.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="learn_from_an_ai_3.aspx.designer.vb">
+      <DependentUpon>learn_from_an_ai_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="learn_from_an_ai_3.aspx.vb">
+      <DependentUpon>learn_from_an_ai_3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="two_player.aspx.designer.vb">
+      <DependentUpon>two_player.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="two_player.aspx.vb">
+      <DependentUpon>two_player.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="famous_games.aspx.designer.vb">
+      <DependentUpon>famous_games.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="famous_games.aspx.vb">
+      <DependentUpon>famous_games.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="learn_from_an_ai_2.aspx.designer.vb">
+      <DependentUpon>learn_from_an_ai_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="learn_from_an_ai_2.aspx.vb">
+      <DependentUpon>learn_from_an_ai_2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="learn from an ai.aspx.designer.vb">
+      <DependentUpon>learn from an ai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="learn from an ai.aspx.vb">
+      <DependentUpon>learn from an ai.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="previous game analysis.aspx.designer.vb">
+      <DependentUpon>previous game analysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="previous game analysis.aspx.vb">
+      <DependentUpon>previous game analysis.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Two player.aspx.designer.vb">
+      <DependentUpon>Two player.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Two player.aspx.vb">
+      <DependentUpon>Two player.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="DataSet1.Designer.vb">
@@ -138,11 +209,11 @@
       <DependentUpon>Leaderboards.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Main Menu.aspx.designer.vb">
-      <DependentUpon>Main Menu.aspx</DependentUpon>
+    <Compile Include="main_menu.aspx.designer.vb">
+      <DependentUpon>main_menu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Main Menu.aspx.vb">
-      <DependentUpon>Main Menu.aspx</DependentUpon>
+    <Compile Include="main_menu.aspx.vb">
+      <DependentUpon>main_menu.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -164,11 +235,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Registration and Login.aspx.designer.vb">
-      <DependentUpon>Registration and Login.aspx</DependentUpon>
+    <Compile Include="registration_and_login.aspx.designer.vb">
+      <DependentUpon>registration_and_login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Registration and Login.aspx.vb">
-      <DependentUpon>Registration and Login.aspx</DependentUpon>
+    <Compile Include="registration_and_login.aspx.vb">
+      <DependentUpon>registration_and_login.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="sender_is_piece_to_move_switcher.aspx.designer.vb">
@@ -208,7 +279,64 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="stockfish_15.1_win_x64_avx2\AUTHORS" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\benchmark.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\bitbase.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\bitboard.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\bitboard.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\endgame.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\endgame.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\evaluate.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\evaluate.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\incbin\incbin.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\incbin\UNLICENCE" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\main.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\Makefile" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\material.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\material.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\misc.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\misc.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\movegen.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\movegen.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\movepick.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\movepick.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\evaluate_nnue.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\evaluate_nnue.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\features\half_ka_v2_hm.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\features\half_ka_v2_hm.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\layers\affine_transform.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\layers\clipped_relu.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\layers\simd.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\layers\sqr_clipped_relu.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\nnue_accumulator.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\nnue_architecture.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\nnue_common.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\nnue\nnue_feature_transformer.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\pawns.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\pawns.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\position.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\position.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\psqt.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\psqt.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\search.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\search.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\syzygy\tbprobe.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\syzygy\tbprobe.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\thread.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\thread.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\thread_win32_osx.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\timeman.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\timeman.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\tt.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\tt.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\tune.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\tune.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\types.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\uci.cpp" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\uci.h" />
+    <Content Include="stockfish_15.1_win_x64_avx2\src\ucioption.cpp" />
     <None Include="packages.config" />
+    <Content Include="stockfish.wasm" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
